@@ -1,7 +1,7 @@
-# simple-json-db
+# json-crate
 📦 minimalistic promise-based json database
 
-simple-json-db is a super simple json database for quick hacks or when you
+json-crate is a super simple json database for quick hacks or when you
 need to persist simple json files.
 
 ## Features
@@ -12,7 +12,7 @@ need to persist simple json files.
 
 ## Installation
 ```
-$ npm install simple-json-db
+$ npm install json-crate
 ```
 
 ## Usage
@@ -40,7 +40,7 @@ Given a JSON file:
 ### Reading JSON data
 
 ```javascript
-const { loadAt, writeAt } = require("simple-json-db")
+const { loadAt, writeAt } = require("json-crate")
 
 // You can load a specific property
 loadAt("./tmp/groceries.json", "bakery.bread").then(bread => {
@@ -55,7 +55,7 @@ loadAt("./tmp/groceries.json", "bakery.bread[1]").then(bread => {
 })
 ```
 
-simple-json-db uses lodash"s [object path](https://lodash.com/docs/4.17.4#get) notation to read and write nested properties in the json file.
+json-crate uses lodash"s [object path](https://lodash.com/docs/4.17.4#get) notation to read and write nested properties in the json file.
 
 ### Writing JSON data
 
@@ -97,18 +97,18 @@ Will update our `groceries.json` file with:
 
 ## Notes
 
-You can think of `simple-json-db` as a couple of convenience wrappers for dealing with simple objects you may want to persist.
+You can think of `json-crate` as a couple of convenience wrappers for dealing with simple objects you may want to persist.
 
 This library is not intended for production usage and does not provide any data consistency guarantees such as concurrent access, locking of any kind or indexing.
 
-Some great use-cases for `simple-json-db`:
+Some great use-cases for `json-crate`:
 - test fixtures
 - configuration files
 - managing environment variables
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/nettofarah/simple-json-db. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Code of Conduct](https://github.com/nettofarah/simple-json-db/blob/master/CODE_OF_CONDUCT.md).
+Bug reports and pull requests are welcome on GitHub at https://github.com/nettofarah/json-crate. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Code of Conduct](https://github.com/nettofarah/json-crate/blob/master/CODE_OF_CONDUCT.md).
 
 To run the specs check out the repo and follow these steps:
 

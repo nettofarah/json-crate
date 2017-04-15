@@ -1,9 +1,9 @@
 {
-  "name": "simple-json-db",
+  "name": "json-crate",
   "version": "0.1.0",
-  "description": "📦 simple-json-db - minimalistic promise-based json database",
+  "description": "📦 json-crate - minimalistic promise-based json database",
   "main": "index.js",
-  "repository": "https://github.com/nettofarah/simple-json-db",
+  "repository": "https://github.com/nettofarah/json-crate",
   "author": "Netto Farah",
   "license": "MIT",
   "devDependencies": {
