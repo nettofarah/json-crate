@@ -71,8 +71,21 @@ writeAt("./tmp/groceries.json", "frozen.ice-cream", [
 Will update our `groceries.json` file with:
 ```json
 {
-  // previous properties
-  ...,
+  "bakery": {
+    "bread": [
+      "sourdough", "french baguette"
+    ],
+    "desert": [
+      "blueberry muffins", "chocolate croissant"
+    ]
+  },
+  "household": {
+    "cleaning-products": {
+      "dish-detergents": [
+        "Method Dish Soap Lemon Mint", "Meyers Clean Day Liquid Dish Soap"
+      ]
+    }
+  },
   "frozen": {
     "ice-cream": [
       "chocolate chip cookie",
