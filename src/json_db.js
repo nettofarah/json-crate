@@ -4,8 +4,6 @@ const mkdirp = require('mkdirp')
 const getDirName = require('path').dirname
 
 function loadAt(filePath, jsonPath) {
-  mkdirp.sync(getDirName(filePath))
-
   return fs.readJson(filePath).then(function(json) {
     if (isUndefined(jsonPath)) {
       return json

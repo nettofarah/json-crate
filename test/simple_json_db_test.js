@@ -17,7 +17,8 @@ describe('JsonDB', function() {
       fs.writeJsonSync(path, {
         a: {
           b: {
-            c: 'it works!'
+            c: 'it works!',
+            c_array: ['x', 'y', 'z']
           }
         }
       })
@@ -30,7 +31,8 @@ describe('JsonDB', function() {
           assert.deepEqual(payload, {
             a: {
               b: {
-                c: 'it works!'
+                c: 'it works!',
+                c_array: ['x', 'y', 'z']
               }
             }
           })
@@ -43,6 +45,24 @@ describe('JsonDB', function() {
         .loadAt(path, 'a.b.c')
         .then(function(payload) {
           assert.equal(payload, 'it works!')
+        })
+        .then(done)
+    })
+
+    it('accepts array paths', function(done) {
+      jsonDB
+        .loadAt(path, 'a.b.c_array[0]')
+        .then(function(payload) {
+          assert.equal(payload, 'x')
+        })
+        .then(done)
+    })
+
+    it('rejects unexisting array indexes', function(done) {
+      jsonDB
+        .loadAt(path, 'a.b.c_array[3]')
+        .catch(function(error) {
+          assert.equal(error.message, 'Invalid JSON Path')
         })
         .then(done)
     })
