@@ -1,0 +1,30 @@
+{
+  "name": "simple-json-db",
+  "version": "0.1.0",
+  "description": "📦 simple-json-db - minimalistic promise-based json database",
+  "main": "index.js",
+  "repository": "https://github.com/nettofarah/simple-json-db",
+  "author": "Netto Farah",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "^3.2.0",
+    "rimraf": "^2.6.1"
+  },
+  "dependencies": {
+    "fs-promise": "^2.0.2",
+    "lodash": "^4.17.4"
+  },
+  "scripts": {
+    "test": "mocha test"
+  },
+  "files": [
+    "index.js",
+    "src"
+  ],
+  "keywords": [
+    "json",
+    "database",
+    "json database",
+    "testing database"
+  ]
+}
