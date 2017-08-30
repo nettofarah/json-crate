@@ -1,6 +1,6 @@
 {
   "name": "json-crate",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "📦 json-crate - minimalistic promise-based json database",
   "main": "index.js",
   "repository": "https://github.com/nettofarah/json-crate",
