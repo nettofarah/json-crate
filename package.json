@@ -12,7 +12,8 @@
   },
   "dependencies": {
     "fs-promise": "^2.0.2",
-    "lodash": "^4.17.4"
+    "lodash": "^4.17.4",
+    "mkdirp": "^0.5.1"
   },
   "scripts": {
     "test": "mocha test"
